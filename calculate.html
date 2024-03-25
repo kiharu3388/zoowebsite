@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="https://3.bp.blogspot.com/-2AkJE-MGLfc/U82zHahLd6I/AAAAAAAAjLI/0zEEK9QOsdM/s150/animal_mark04_neko.png" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+
+  <title>Animals</title>
+
+  <link rel="stylesheet" href="style.css" />
+<!--   <style>
+    body {
+      background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+    }
+  </style> -->
+  
+  <script src="script.js" defer></script>
+  <script type="text/javascript" src="script.js"></script>
+</head>
+<script>
+  function multiplyBy5() {
+    // 入力値を取得
+    var numberInput = document.getElementById("numberInputInko");
+    var inputValue = parseFloat(numberInput.value);
+
+    // 数値が有効かどうかをチェック
+    if (!isNaN(inputValue)) {
+      // 入力値に5を掛けて結果を表示する
+      let result = (inputValue - 1) * 5 + 20;
+      document.getElementById("resultInko").textContent = "人間の年齢で言うと" + result + "歳です。";
+    } else {
+      // 数値が無効な場合、エラーメッセージを表示する
+      document.getElementById("resultInko").textContent = "無効な入力です。数値を入力してください。";
+    }
+  }
+
+  function multiplyBy4() {
+    // 入力値を取得
+    let numberInput = document.getElementById("numberInputCat");
+    let inputValue = parseFloat(numberInput.value);
+
+    // 数値が有効かどうかをチェック
+    if (!isNaN(inputValue)) {
+      // 入力値に4を掛けて結果を表示
+      let result = (inputValue - 1) * 4 + 20;
+      document.getElementById("resultCat").textContent = "人間の年齢で言うと" + result + "歳です";
+    } else {
+      // 数値が無効な場合、エラーメッセージを表示
+      document.getElementById("resultCat").textContent = "数字で入力してください。";
+    }
+  }
+</script>
+  
+<body>
+  <div class="custom">
+  <span class="material-icons">
+    <a href="index.html">
+        home
+    </a>
+  </span>
+  <div class="calculate">
+  <h1>
+    動物の年齢を人間の年齢に換算してみよう！
+    </h1>
+    <div class="cover">
+    <img src="https://cdn.glitch.global/be0cdaab-9e1d-4730-b2c6-adfc57d32d63/7170.jpeg?v=1699765112676">
+  </div>
+    
+  <div class="inko_age">
+    <h2>小型インコの年齢を人間の年齢に換算してみよう</h2>
+  <div class="cp_iptxt">
+	 <label class="ef">
+	 <input type="number" id="numberInputInko" placeholder="インコの年齢を数字で入力してください">
+	 </label>
+ </div>
+    
+  　<button class="btn_20" onclick="multiplyBy5()">Go</button>
+    
+<!--     <button onclick="multiplyBy5()" >計算する</button> -->
+    <p id="resultInko"></p> <!-- 結果を表示するところ -->
+  </div>
+    
+    
+  <div class="cat_age">
+    <h2>猫の年齢を人間の年齢に換算してみよう</h2>
+   
+  <div class="cp_iptxt"> 
+   <label class="ef">
+	 <input type="number" id="numberInputCat" placeholder="猫ちゃんの年齢を数字で入力してください">
+	 </label>
+  </div>
+    <button class="btn_20" onclick="multiplyBy4()">Go</button>
+    <p id="resultCat"></p>
+  </div> 
+  </div>
+  </div>
+</body>
+</html>

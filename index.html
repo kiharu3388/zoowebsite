@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="css3, html5, js, background video, fullscreen video">
+    <meta name="description" content="Super easy to implement HTML5 fullscreen background video library in JavaScript.">
+    
+    <link rel="icon" href="https://3.bp.blogspot.com/-2AkJE-MGLfc/U82zHahLd6I/AAAAAAAAjLI/0zEEK9QOsdM/s150/animal_mark04_neko.png" />
+    <title>Waffle Zoo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" クロスオリジン>
+    <link href="https: //fonts.googleapis.com/css2? family= Edu+TAS+初心者& display=swap" rel="stylesheet">
+    <!-- The website stylesheet -->
+<!--     <link rel="stylesheet" href="/style.css" />
+ -->
+    <!-- The website JavaScript file -->
+      <style>* {
+      margin: 0; padding: 0;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    
+
+    #container {
+      overflow: hidden;
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+    }
+
+    #background_video {
+      position: absolute;
+
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+
+      object-fit: cover;
+      height: 100%; width: 100%;
+    }
+
+    #video_cover {
+      position: absolute;
+
+      width: 100%; height: 100%;
+
+      background: url('video_cover.jpeg') no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    #video_controls {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+
+    @media (min-width: 768px) {
+      #video_controls {
+        display: none;
+      }
+    }
+
+    /* Demo page specific styles */
+
+    body {
+      text-align: center;
+      font-family: 'proxima-nova', Helvetica;
+    }
+
+    #container {
+      height: 100%;
+    }
+
+    #overlay {
+      position: absolute;
+      top: 0; right: 0; left: 0; bottom: 0;
+      background: rgba(0,0,0,0.5);
+    }
+
+    #main_content {
+      z-index: 2;
+      position: relative;
+      display: inline-block;
+
+      /* Vertical center */
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    #main_content h1 {
+      text-transform: uppercase;
+      font-weight: 600;
+      font-family: 'proxima-nova-condensed', Helvetica;
+      color: #ffffff;
+      font-size: 50px;
+    }
+
+    #main_content .sub_head {
+      color: rgba(255,255,255,0.5);
+      font-size: 20px;
+    }
+
+    .nav {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      z-index: 3; /* ナビゲーションバーが他の要素の上に表示されるように */
+      list-style: none; /* リストのデフォルトのマーカーを非表示にする */
+      display: flex;
+    
+    }
+
+    .nav-item {
+      margin-right: 30px;
+    }
+
+    .nav-link {
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+      font-family: 'Edu TAS Beginner', cursive;
+    }
+
+    .nav-link:hover {
+      color: yellow;
+      font-weight: bold;
+      font-family: 'Edu TAS Beginner', cursive;
+    }
+    h1 {
+  
+    color: White;
+    font-size: 10rem;
+}
+  .z-layer:not(:first-child) {
+    color: black;
+}
+    
+ </style> 
+
+<script src="https://assets.codepen.io/85188/ztext.min.js"></script>
+  <script src="video.js"></script>
+  <script src="main.js"></script>
+  <script>
+    if (window.location.host.indexOf('github.io') !== -1 && window.location.protocol !== "https:") {
+      window.location.protocol = "https";
+    }
+  </script> 
+  <script src="/ztext.js" defer></script>
+    
+  </head>
+  
+  
+  
+<body>
+
+    <div id="container">
+    <video id="background_video" loop muted>
+      <source src="https://cdn.glitch.me/c556471c-0732-4911-b863-272443977ca1/animals.mp4?v=1699705321095" type="video/mp4">
+    </video>
+  </div>
+  <div id="video_cover"></div>
+  <div id="overlay"></div>
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="a-animals.html">Animals</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="calculate.html">Extra</a>
+      </li>
+    </ul>
+    <section id="main_content">
+        <div id="head">
+              <h1>Waffle ZOO</h1>
+            <p class="sub_head">waffle動物園へようこそ!</p>
+        </div>
+    </section>  
+  
+  
+
+  
+  <script src="https://assets.codepen.io/85188/ztext.min.js"></script>
+  <script src="video.js"></script>
+  <script src="main.js"></script>
+  <script>
+    if (window.location.host.indexOf('github.io') !== -1 && window.location.protocol !== "https:") {
+      window.location.protocol = "https";
+    }
+  </script> 
+  <script src="/ztext.js" defer></script>
+    
+</body>
+</html>

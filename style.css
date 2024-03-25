@@ -1,0 +1,320 @@
+a{
+  text-decoration: none !important;
+  color: black !important; 
+  padding: 0;
+  margin-right: 20px;
+}
+
+
+img {
+ 
+  width:50%;
+  /* 画像周りの無駄なスペースができないように */
+  vertical-align: bottom;
+  margin: 0;
+	padding: 0;
+  margin-left: 20px;
+  
+}
+
+
+
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+div.left img {
+  width: 100%; /* 新しい幅を指定 */
+  height: 50%; /* 新しい高さを指定 */
+}
+
+
+.left {
+    flex: 1;
+    padding: 20px;
+}
+
+.right {
+    flex: 1;
+    padding: 20px;
+    
+}
+
+
+
+
+
+/*アコーディオン全体*/
+.accordion-area{
+  
+    list-style: none;
+    width: 100%;
+    max-width: 900px;
+    margin-bottom:50px;
+    font-family:"Yu Gothic","YuGothic";
+  
+}
+
+.accordion-area li{
+    margin: 10px 0;
+    
+}
+
+.accordion-area section {
+  border: 1px solid #ccc;
+  
+}
+
+/*アコーディオンタイトル*/
+.title {
+    position: relative;/*+マークの位置基準とするためrelative指定*/
+    cursor: pointer;
+    font-size:1rem;
+    font-weight: normal;
+    padding: 3% 3% 3% 50px;
+    transition: all .5s ease;
+}
+
+/*アイコンの＋と×*/
+.title::before,
+.title::after{
+    position: absolute;
+    content:'';
+    width: 15px;
+    height: 2px;
+    background-color: #333;
+    
+}
+.title::before{
+    top:48%;
+    left: 15px;
+    transform: rotate(0deg);
+    
+}
+.title::after{    
+    top:48%;
+    left: 15px;
+    transform: rotate(90deg);
+
+}
+/*　closeというクラスがついたら形状変化　*/
+.title.close::before{
+  transform: rotate(45deg);
+}
+
+.title.close::after{
+  transform: rotate(-45deg);
+}
+
+/*アコーディオンで現れるエリア*/
+.box {
+    display: none;/*はじめは非表示*/
+    background: #f3f3f3;
+    margin:0 3% 3% 3%;
+    padding: 3%;
+}
+
+
+.tippy{
+  margin-top:10px;
+  margin-left:30px;
+  font-family:"Yu Gothic","YuGothic";
+}
+
+
+.accordion-area h2{
+  font-size:45px;
+}
+
+
+
+
+/* 動物選択のページ */
+.hook{
+  
+  text-align: center;
+  margin-top:60px;
+  margin-bottom:80px;
+  font-size:30px;
+  font-family:"Yu Gothic","YuGothic";
+}
+
+
+
+
+
+.animals{
+ 
+  display: flex;
+  padding-left:90px;
+  margin-top:20px;
+　font-family:"Yu Gothic","YuGothic";
+  
+}
+
+
+
+.cat{
+  animation-name:smoothAnime;
+  animation-duration:1s;
+  animation-fill-mode:forwards;
+    transform-origin:left;
+  opacity:0;
+}
+
+.fox{
+   animation-name:smoothAnime;
+  animation-duration:1s;
+  animation-fill-mode:forwards;
+    transform-origin:left;
+  opacity:0;
+}
+
+.inko{
+   animation-name:smoothAnime;
+  animation-duration:1s;
+  animation-fill-mode:forwards;
+    transform-origin:left;
+  opacity:0;
+}
+
+.redpanda{
+ animation-name:smoothAnime;
+  animation-duration:1s;
+  animation-fill-mode:forwards;
+    transform-origin:left;
+  opacity:0;
+}
+
+.wolf{
+  animation-name:smoothAnime;
+  animation-duration:1s;
+  animation-fill-mode:forwards;
+    transform-origin:left;
+  opacity:0;
+}
+
+@keyframes smoothAnime{
+  from {
+  transform:translate3d(0, 100%, 0) skewY(12deg);
+  opacity:0;
+  }
+
+  to {
+  transform:translate3d(0, 0, 0) skewY(0);
+  opacity:1;
+  }
+}
+
+.cover {
+  
+  animation: walk 20s steps(20, end) infinite;
+  width:8%;
+}
+ 
+@keyframes walk {
+  to {
+    transform: translateX(1200px);
+  }
+}
+
+
+
+
+/* 計算ページ */
+.calculate{
+  font-family:"Yu Gothic", "YuGothic";
+  color:#554738;
+}
+
+.calculate h1{
+  text-align: center;
+  margin-top:60px;
+  margin-bottom:80px;
+  font-size:45px;
+}
+
+
+/*  年齢計算ボタン*/
+.btn_20 {
+	display: block;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	width: 120px;
+	margin: auto;
+  margin-top:30px;
+  margin-bottom:30px;
+	padding: 1rem 4rem;
+	font-weight: bold;
+	border: 2px solid #27acd9;
+	background: #27acd9;
+	color: #fff;
+	border-radius: 5px;
+	transition: 0.5s;
+	animation: move_b 2s infinite;
+}
+
+
+@keyframes move_b {
+    0% {transform: translate(4px, 0px);}
+    5% {transform: translate(-4px, 0px);}
+    10% {transform: translate(4px, 0px);}
+    15% {transform: translate(-4px, 0px);}
+	  20% {transform: translate(4px, 0px);}
+    25% {transform: translate(-4px, 0px);}
+    30% {transform: translate(0px, 0px);}
+}
+.btn_20:hover {
+	color: #27acd9;
+	background: #fff;
+}
+
+
+
+/*  数字インプットのところ*/
+.cp_iptxt {
+	position: relative;
+	width: 30%;
+	margin-left:500px;
+  
+}
+.cp_iptxt input[type='number'] {
+	font: 15px/24px sans-serif;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 0.3em;
+	transition: 0.3s;
+	letter-spacing: 1px;
+	color: #aaaaaa;
+	border: none;
+	border-bottom: 2px solid #1b2538;
+	background: transparent;
+}
+.ef input[type='number']:focus {
+	border-bottom: 2px solid #da3c41;
+	outline: none;
+}
+
+
+
+
+/* クラス ink_age の幅を設定 */
+.inko_age {
+      padding-bottom:50px;
+      padding-top:20px;
+      text-align:center;
+      font-size:20px;
+}
+
+/* クラス cat_age の幅を設定 */
+.cat_age {
+      padding-bottom:30px;
+      text-align:center;
+      font-size:20px;
+}
